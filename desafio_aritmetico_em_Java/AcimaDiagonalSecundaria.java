@@ -28,7 +28,7 @@ public class AcimaDiagonalSecundaria {
 		System.out.print("Cálculo será soma ou média(s/m)? ");
 		char O = sc.next().toUpperCase().charAt(0);
 		
-		double M[][] = new double[4][4];
+		double M[][] = new double[12][12];
 		
 		for(int i=0; i<M.length; i++) {
 			for(int j=0; j<M.length; j++) {
