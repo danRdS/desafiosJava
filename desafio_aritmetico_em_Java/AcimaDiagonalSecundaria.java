@@ -37,9 +37,9 @@ public class AcimaDiagonalSecundaria {
 		}
 		
 		double soma = 0;
-		for(int i=0; i<3; i++) {
-			for(int j=0; j<3-i; j++) {
-				soma += M[i][3-1-i-j];
+		for(int i=0; i<11; i++) {
+			for(int j=0; j<11-i; j++) {
+				soma += M[i][11-1-i-j];
 			}
 		}
 		
