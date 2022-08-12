@@ -1,0 +1,54 @@
+// Área Direita
+
+/*
+Leia um caractere maiúsculo, que indica uma operação que deve ser realizada e
+uma matriz M[12][12]. Em seguida, calcule e mostre a soma ou a média
+considerando somente aqueles elementos que estão na área direita da matriz,
+conforme ilustrado abaixo (área verde).
+vide arquivo em assets area-direita.png
+- Entrada
+A primeira linha de entrada contem um único caractere Maiúsculo O ('S' ou 'M'),
+indicando a operação (Soma ou Média) que deve ser realizada com os elementos
+da matriz. Seguem os valores de ponto flutuante que variam1 a matriz.
+- Saída
+Imprima o resultado solicitado (a soma ou média), com 1 casa após o ponto
+decimal.
+*/
+
+package desafio_matematico_java;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class AreaDireita {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Calculo será soma ou média(S/M)? ");
+		char O = sc.next().toUpperCase().charAt(0);
+		
+		double M[][] = new double[12][12];
+		
+		for(int i=0; i<M.length; i++) {
+			for(int j=0; j<M.length; j++) {
+				M[i][j] = sc.nextDouble();
+			}
+		}
+		
+		double soma = 0.0;
+		for(int i=0; i<M.length; i++) {
+			for(int j=1; j<M.length-1;j++) {
+				soma += M[i][M.length-j];
+			}
+		}
+		if(O == 'M') soma /= (M.length * M.length)/2;
+		
+		System.out.println(String.format("\n%.1f", soma));
+		
+		sc.close();
+		
+	}
+
+}

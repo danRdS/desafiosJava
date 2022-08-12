@@ -1,13 +1,6 @@
-package desafios_avancados_em_java;
+//Área Superior
 
-import java.util.Scanner;
-
-public class AreaSuperior {
-
-	public static void main(String[] args) {
-		//Área Superior
-
-		/*
+/*
 		Leia um caractere maiúsculo, que indica uma operação que deve ser realizada e
 		uma matriz M[12][12]. Em seguida, calcule e mostre a soma ou a média
 		considerando somente aqueles elementos que estão na área superior da matriz,
@@ -21,13 +14,20 @@ public class AreaSuperior {
 		• Saída
 		Imprima o resultado solicitado (a soma ou média), com 1 casa após o ponto
 		decimal.
-		*/ 
+ */ 
+package desafios_avancados_em_java;
+
+import java.util.Scanner;
+
+public class AreaSuperior {
+
+	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Cálculo será soma ou média(s/m)? ");
 		char O = sc.next().toUpperCase().charAt(0);
 		
-		double M[][] = new double[4][4];
+		double M[][] = new double[12][12];
 		
 		for(int i=0; i<M.length; i++) {
 			for(int j=0; j<M.length; j++) {
